@@ -1,7 +1,42 @@
 // ┌─────────────────┐
 // │ Your code here! │	
 // └─────────────────┘
+function isAdmin(str) {
+    if (str.userRole === “ADMIN”) {
+        return true;
+    } else return false
+}
 
+function getEmail(str) {
+    let first = str.firstName.toLowerCase() + “.”;
+    let last = str.lastName.toLowerCase();
+    let com = “@codeimmersives.com”
+    let email = first + last + com
+    if (email) {
+        return email;
+    }
+}
+
+function getPlaylistLength(arr) {
+    let newArr = arr.songs.length
+    return newArr;
+}
+
+function getHardestHomework(object) {
+    let newArr = [];
+    if (object.getHardestHomework) {
+        return newArr.name.push(object.getHardestHomework);
+    }
+    if (object !== getHardestHomework) {
+        return “”;
+    }
+}
+
+function createPhonebook(name, phone) {
+    let whyIsThisSoComplicated = {};
+
+    return whyIsThisSoComplicated;
+}
 
 
 // ┌─────────────────────────────────────┐
