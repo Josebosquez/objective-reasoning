@@ -17,15 +17,19 @@ function getEmail(str) {
     }
 }
 
-function getPlaylistLength(arr) {
-    let newArr = arr.songs.length
-    return newArr;
+function getPlaylistLength(str) {
+    let newStr = str.songs.length
+    return newStr;
 }
 
 function getHardestHomework(object) {
     let newArr = [];
-    if (object.getHardestHomework) {
-        return newArr.name.push(object.getHardestHomework);
+    for (i = 0; i < object.length; i++){
+        if(object.name){
+            if(object.score[i] < 100){
+                newArr += object.score[i]
+            }
+        }
     }
     if (object !== getHardestHomework) {
         return "";
@@ -34,8 +38,8 @@ function getHardestHomework(object) {
 
 function createPhonebook(name, phone) {
     let whyIsThisSoComplicated = {};
-    for (i = 0; i < name.length; i ++){
-        whyIsThisSoComplicated[name[i]] = whyIsThisSoComplicated[phone[i]];
+    for (i = 0; i < name.length; i++) {
+        whyIsThisSoComplicated[name[i]] = phone[i];
     }
     return whyIsThisSoComplicated;
 }
