@@ -23,19 +23,15 @@ function getPlaylistLength(str) {
 }
 
 function getHardestHomework(object) {
-    let newArr = [];
-    for (i = 0; i < object.length; i++){
-        if(object.name){
-            if(object.score[i] < 100){
-                newArr += object.score[i]
-            }
+    let smallest = 100;
+    let nameOfHardest = '';
+    for (const score of object) {
+        if (score.averageScore < smallest) {
+            smallest = score.averageScore;
+            nameOfHardest = score.name;
         }
-    }
-    if (object !== getHardestHomework) {
-        return "";
-    }
+    } return nameOfHardest;
 }
-
 function createPhonebook(name, phone) {
     let whyIsThisSoComplicated = {};
     for (i = 0; i < name.length; i++) {
@@ -43,7 +39,6 @@ function createPhonebook(name, phone) {
     }
     return whyIsThisSoComplicated;
 }
-
 
 // ┌─────────────────────────────────────┐
 // │ Do not modify code below this line. │
